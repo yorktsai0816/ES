@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarketGoModelStoreContainer" CdmEntityContainer="MarketGoEntities">
+    <EntitySetMapping Name="MGadminLogins">
+      <EntityTypeMapping TypeName="MarketGoModel.MGadminLogin">
+        <MappingFragment StoreEntitySet="MGadminLogin">
+          <ScalarProperty Name="A_password" ColumnName="A_password" />
+          <ScalarProperty Name="A_account" ColumnName="A_account" />
+          <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGcomments">
+      <EntityTypeMapping TypeName="MarketGoModel.MGcomment">
+        <MappingFragment StoreEntitySet="MGcomment">
+          <ScalarProperty Name="C_content" ColumnName="C_content" />
+          <ScalarProperty Name="C_email" ColumnName="C_email" />
+          <ScalarProperty Name="C_sexcial" ColumnName="C_sexcial" />
+          <ScalarProperty Name="C_name" ColumnName="C_name" />
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGevents">
+      <EntityTypeMapping TypeName="MarketGoModel.MGevent">
+        <MappingFragment StoreEntitySet="MGevents">
+          <ScalarProperty Name="OE_FB" ColumnName="OE_FB" />
+          <ScalarProperty Name="OE_I6" ColumnName="OE_I6" />
+          <ScalarProperty Name="OE_I5" ColumnName="OE_I5" />
+          <ScalarProperty Name="OE_I4" ColumnName="OE_I4" />
+          <ScalarProperty Name="OE_I3" ColumnName="OE_I3" />
+          <ScalarProperty Name="OE_I2" ColumnName="OE_I2" />
+          <ScalarProperty Name="OE_I1" ColumnName="OE_I1" />
+          <ScalarProperty Name="E_NL_L10" ColumnName="E_NL_L10" />
+          <ScalarProperty Name="E_NL_L9" ColumnName="E_NL_L9" />
+          <ScalarProperty Name="E_NL_L8" ColumnName="E_NL_L8" />
+          <ScalarProperty Name="E_NL_L7" ColumnName="E_NL_L7" />
+          <ScalarProperty Name="E_NL_L6" ColumnName="E_NL_L6" />
+          <ScalarProperty Name="E_NL_L5" ColumnName="E_NL_L5" />
+          <ScalarProperty Name="E_NL_L4" ColumnName="E_NL_L4" />
+          <ScalarProperty Name="E_NL_L3" ColumnName="E_NL_L3" />
+          <ScalarProperty Name="E_NL_L2" ColumnName="E_NL_L2" />
+          <ScalarProperty Name="E_NL_L1" ColumnName="E_NL_L1" />
+          <ScalarProperty Name="E_LOGO_S" ColumnName="E_LOGO_S" />
+          <ScalarProperty Name="E_LOGO_L" ColumnName="E_LOGO_L" />
+          <ScalarProperty Name="E_detail" ColumnName="E_detail" />
+          <ScalarProperty Name="E_unitInstock" ColumnName="E_unitInstock" />
+          <ScalarProperty Name="E_peopleWho" ColumnName="E_peopleWho" />
+          <ScalarProperty Name="E_address" ColumnName="E_address" />
+          <ScalarProperty Name="E_regist_time_end" ColumnName="E_regist_time_end" />
+          <ScalarProperty Name="E_regist_time_start" ColumnName="E_regist_time_start" />
+          <ScalarProperty Name="E_time_end" ColumnName="E_time_end" />
+          <ScalarProperty Name="E_time_start" ColumnName="E_time_start" />
+          <ScalarProperty Name="E_name" ColumnName="E_name" />
+          <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGmembers">
+      <EntityTypeMapping TypeName="MarketGoModel.MGmember">
+        <MappingFragment StoreEntitySet="MGmember">
+          <ScalarProperty Name="M_seller_I6" ColumnName="M_seller_I6" />
+          <ScalarProperty Name="M_seller_I5" ColumnName="M_seller_I5" />
+          <ScalarProperty Name="M_seller_I4" ColumnName="M_seller_I4" />
+          <ScalarProperty Name="M_seller_I3" ColumnName="M_seller_I3" />
+          <ScalarProperty Name="M_seller_I2" ColumnName="M_seller_I2" />
+          <ScalarProperty Name="M_seller_I1" ColumnName="M_seller_I1" />
+          <ScalarProperty Name="M_seller_exp" ColumnName="M_seller_exp" />
+          <ScalarProperty Name="M_seller_image" ColumnName="M_seller_image" />
+          <ScalarProperty Name="M_seller_about" ColumnName="M_seller_about" />
+          <ScalarProperty Name="M_seller_page" ColumnName="M_seller_page" />
+          <ScalarProperty Name="M_seller_name" ColumnName="M_seller_name" />
+          <ScalarProperty Name="M_contact_tel" ColumnName="M_contact_tel" />
+          <ScalarProperty Name="M_contact_address" ColumnName="M_contact_address" />
+          <ScalarProperty Name="M_sexcial" ColumnName="M_sexcial" />
+          <ScalarProperty Name="M_contact_name" ColumnName="M_contact_name" />
+          <ScalarProperty Name="M_host_image" ColumnName="M_host_image" />
+          <ScalarProperty Name="M_host_about" ColumnName="M_host_about" />
+          <ScalarProperty Name="M_host_people" ColumnName="M_host_people" />
+          <ScalarProperty Name="M_host_page" ColumnName="M_host_page" />
+          <ScalarProperty Name="M_host_name" ColumnName="M_host_name" />
+          <ScalarProperty Name="M_identity" ColumnName="M_identity" />
+          <ScalarProperty Name="M_email" ColumnName="M_email" />
+          <ScalarProperty Name="M_password_check" ColumnName="M_password_check" />
+          <ScalarProperty Name="M_password" ColumnName="M_password" />
+          <ScalarProperty Name="M_account" ColumnName="M_account" />
+          <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGsellerChecks">
+      <EntityTypeMapping TypeName="MarketGoModel.MGsellerCheck">
+        <MappingFragment StoreEntitySet="MGsellerCheck">
+          <ScalarProperty Name="SC_state" ColumnName="SC_state" />
+          <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGsellerSigns">
+      <EntityTypeMapping TypeName="MarketGoModel.MGsellerSign">
+        <MappingFragment StoreEntitySet="MGsellerSign">
+          <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+          <ScalarProperty Name="SS_note" ColumnName="SS_note" />
+          <ScalarProperty Name="SS_num" ColumnName="SS_num" />
+          <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+          <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MGwishlists">
+      <EntityTypeMapping TypeName="MarketGoModel.MGwishlist">
+        <MappingFragment StoreEntitySet="MGwishlist">
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+          <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+          <ScalarProperty Name="W_ID" ColumnName="W_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

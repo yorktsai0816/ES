@@ -1,0 +1,521 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Market Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/app_icon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/app_icon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/app_icon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/app_icon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/app_icon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/app_icon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/app_icon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/app_icon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/app_icon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/app_icon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="~/images/app_icon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="~/images/app_icon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="~/images/app_icon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="~/images/app_icon/android-chrome-192x192.png" sizes="192x192">
+    <meta name="msapplication-square70x70logo" content="images/app_icon/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="images/app_icon/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="images/app_icon/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="images/app_icon/largetile.png" />
+    <link rel="stylesheet" type="text/css" href="~/css/normalize.css">
+    <!--  ↓ 放整個網站都會用到的套件CSS / 字形... 等 ↓ -->
+    <link rel="stylesheet" type="text/css" href="~/css/icon-font/style.css">
+    <link rel="stylesheet" type="text/css" href="~/js/fancyBox/source/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="~/css/basic.css">
+    <!-- style.css 前台全站共用樣式 -->
+    <link rel="stylesheet" href="~/js/slick/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/index.css">
+    <!-- ↓ 放整個網站都會用到的固定JS ↓ -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/fancyBox/source/jquery.fancybox.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/slick/slick/slick.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header">
+            <div class="container">
+                <h1 class="site-title"><a href="index.html" class="logo ibtn">網站名稱</a></h1>
+                <nav class="site-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul class="menu list-h">
+                        <li><a href="about.html">關於我們<span>ABOUT</span></a></li>
+                        <li><a href="market.html">逛逛市集<span>MARKET</span></a></li>
+                        <li><a href="event.html">看看活動<span>EVENT</span></a></li>
+                        <li><a href="notice.html">問與答<span>Q&amp;A</span></a></li>
+                        <li>
+                            <a href="member_edit.html">會員專區<span>MEMBER</span></a>
+                            <ul>
+                                <li><a href="member_login.html">會員登入</a></li>
+                                <li><a href="member_register.html">加入會員</a></li>
+                                <li><a href="member_forgot.html">忘記密碼</a></li>
+                                <li><a href="member_edit.html">個人資料修改</a></li>
+                                <li><a href="member_wishlist.html">收藏清單</a></li>
+                                <li><a href="#">會員登出</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">聯絡我們<span>CONTACT</span></a></li>
+                        <li><a href="disclaimer.html">免責聲明<span>DISCLAIMER</span></a></li>
+                        <li><a href="terms.html">使用條款<span>TERMS</span></a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <input type="text" name="" id="" class="form-control" placeholder="搜尋欄位">
+                    <!-- <input type="button" value="Search" class="ibtn search"> -->
+                    <a href="search.html" class="search"><i class="ic ic3-search2"></i></a>
+                </div>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="~/images/index/banner.jpg" alt="">
+        </div>
+        <main class="site-main" itemscope itemtype="http://schema.org/Article">
+            <section class="sect01">
+                <div class="container">
+                    <div class="index-title">
+                        <span><i></i>來看看最近的活動</span>
+                        <p>LATEST EVENTS</p>
+                    </div>
+                    <div class="event-box">
+                        <div class="arrow-box"></div>
+                        <ul class="event-list list-h">
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <a href="event_detail.html">
+                                        <figure class="pic">
+                                            <img src="~/images/event/pic.jpg" />
+                                        </figure>
+                                    </a>
+                                    <div class="text">
+                                        <h5 class="tit">臺中文學館 // 臺中文學季</h5>
+                                        <p>403 台中市西區樂群街48號</p>
+                                        <div class="textdate clearfix">
+                                            <time>2015/12/26</time>
+                                            <button class="btn wish"><i></i></button>
+                                        </div>
+                                        <a href="#" class="more clearfix">READ MORE <i></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="event.html" class="btn more">MORE</a>
+                    </div>
+                </div>
+            </section>
+            <section class="sect02">
+                <div class="about-box">
+                    <div class="container">
+                        <div class="index-title">
+                            <span><i></i>我們的期許</span>
+                            <p>ABOUT US</p>
+                        </div>
+                        <article>
+                            想要建立，能夠提供給，
+                            <br> 所有想招集不同類型的創作好朋友一起參與市集的空間。
+                            <br>
+                            <br> 想要建立，能夠提供給，
+                            <br> 所有創作者有個活動能表達、展現自我的空間。
+                            <br>
+                            <br> 想要建立，能夠提供給，
+                            <br> 不論是不是創作者，男女老少爺爺奶奶，都能參與活動享受市集，刷新自己腦袋的空間。
+                            <br>
+                            <br> 『那麼，就讓我們一起走出家門，享受人與人之間，久違片刻的交流吧！』
+                        </article>
+                        <a href="about.html" class="btn more">MORE</a>
+                    </div>
+                </div>
+            </section>
+            <section class="sect03">
+                <div class="container">
+                    <div class="market-box">
+                        <div class="index-title">
+                            <span><i></i>逛逛好市集</span>
+                            <p>MARKET OVERVIEW</p>
+                        </div>
+                        <ul class="market-list list-h">
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market1.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market2.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market3.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market4.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market5.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market6.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market7.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box">
+                                    <figure class="pic">
+                                        <img src="~/images/index/market8.jpg" />
+                                    </figure>
+                                    <div class="text-box">
+                                        <div class="text">
+                                            <h5 class="tit">好好手感微笑市集</h5>
+                                            <span>以創意激盪、質感行銷、互助互惠、友善溫暖為號召，歡迎以創作為志趣的所有人加入，期望營造〈友善微型手作市集聚落〉。</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="market.html" class="btn more">MORE</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="site-map">
+                        <ul class="list-v">
+                            <li><a href="about.html">關於我們</a></li>
+                            <li><a href="news.html">逛逛市集</a></li>
+                        </ul>
+                        <ul class="list-v">
+                            <li><a href="order.html">看看活動</a></li>
+                            <li><a href="paid_inform.html">問與答</a></li>
+                        </ul>
+                        <ul class="list-v">
+                            <li><a href="terms.html">會員專區</a></li>
+                            <li><a href="disclaimer.html">聯絡我們</a></li>
+                        </ul>
+                        <ul class="list-v">
+                            <li><a href="notice.html">免責聲明</a></li>
+                            <li><a href="notice.html">使用條款</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <span class="copyright"> Copyright © Document All Rights Reserved. </span>
+                    <span class="author"> Web design：SMIT05 </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+    $(document).ready(function() {
+        $('.event-list').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            lazyLoad: 'ondemand',
+            autoplay: false,
+            autoplaySpeed: 6000,
+            arrows: true,
+            appendArrows: $('.arrow-box'),
+            responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            ]
+        });
+    });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketGoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MGadminLogin">
+    <Key>
+      <PropertyRef Name="A_ID" />
+    </Key>
+    <Property Name="A_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="A_account" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="A_password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MGcomment">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="C_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="C_sexcial" Type="int" />
+    <Property Name="C_email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="C_content" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MGevents">
+    <Key>
+      <PropertyRef Name="E_ID" />
+    </Key>
+    <Property Name="E_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="M_ID" Type="int" Nullable="false" />
+    <Property Name="E_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_time_start" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_time_end" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_regist_time_start" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_regist_time_end" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_peopleWho" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_unitInstock" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_detail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_LOGO_L" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_LOGO_S" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="E_NL_L1" Type="nvarchar(max)" />
+    <Property Name="E_NL_L2" Type="nvarchar(max)" />
+    <Property Name="E_NL_L3" Type="nvarchar(max)" />
+    <Property Name="E_NL_L4" Type="nvarchar(max)" />
+    <Property Name="E_NL_L5" Type="nvarchar(max)" />
+    <Property Name="E_NL_L6" Type="nvarchar(max)" />
+    <Property Name="E_NL_L7" Type="nvarchar(max)" />
+    <Property Name="E_NL_L8" Type="nvarchar(max)" />
+    <Property Name="E_NL_L9" Type="nvarchar(max)" />
+    <Property Name="E_NL_L10" Type="nvarchar(max)" />
+    <Property Name="OE_I1" Type="nvarchar(max)" />
+    <Property Name="OE_I2" Type="nvarchar(max)" />
+    <Property Name="OE_I3" Type="nvarchar(max)" />
+    <Property Name="OE_I4" Type="nvarchar(max)" />
+    <Property Name="OE_I5" Type="nvarchar(max)" />
+    <Property Name="OE_I6" Type="nvarchar(max)" />
+    <Property Name="OE_FB" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MGmember">
+    <Key>
+      <PropertyRef Name="M_ID" />
+    </Key>
+    <Property Name="M_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="M_account" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M_password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M_password_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M_email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M_identity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M_host_name" Type="nvarchar(max)" />
+    <Property Name="M_host_page" Type="nvarchar(max)" />
+    <Property Name="M_host_people" Type="nvarchar(max)" />
+    <Property Name="M_host_about" Type="nvarchar(max)" />
+    <Property Name="M_host_image" Type="nvarchar(max)" />
+    <Property Name="M_contact_name" Type="nvarchar(max)" />
+    <Property Name="M_sexcial" Type="nvarchar(max)" />
+    <Property Name="M_contact_address" Type="nvarchar(max)" />
+    <Property Name="M_contact_tel" Type="nvarchar(max)" />
+    <Property Name="M_seller_name" Type="nvarchar(max)" />
+    <Property Name="M_seller_page" Type="nvarchar(max)" />
+    <Property Name="M_seller_about" Type="nvarchar(max)" />
+    <Property Name="M_seller_image" Type="nvarchar(max)" />
+    <Property Name="M_seller_exp" Type="nvarchar(max)" />
+    <Property Name="M_seller_I1" Type="nvarchar(max)" />
+    <Property Name="M_seller_I2" Type="nvarchar(max)" />
+    <Property Name="M_seller_I3" Type="nvarchar(max)" />
+    <Property Name="M_seller_I4" Type="nvarchar(max)" />
+    <Property Name="M_seller_I5" Type="nvarchar(max)" />
+    <Property Name="M_seller_I6" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MGsellerCheck">
+    <Key>
+      <PropertyRef Name="SC_ID" />
+    </Key>
+    <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SC_state" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MGsellerSign">
+    <Key>
+      <PropertyRef Name="SS_ID" />
+    </Key>
+    <Property Name="SS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E_ID" Type="int" Nullable="false" />
+    <Property Name="M_ID" Type="int" Nullable="false" />
+    <Property Name="SS_num" Type="int" Nullable="false" />
+    <Property Name="SS_note" Type="nvarchar(max)" />
+    <Property Name="SC_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MGwishlist">
+    <Key>
+      <PropertyRef Name="W_ID" />
+    </Key>
+    <Property Name="W_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="M_ID" Type="int" Nullable="false" />
+    <Property Name="E_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_MGevents_MGmember">
+    <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+    <End Role="MGevents" Type="Self.MGevents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGmember">
+        <PropertyRef Name="M_ID" />
+      </Principal>
+      <Dependent Role="MGevents">
+        <PropertyRef Name="M_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGsellerSign_MGevents">
+    <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+    <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGevents">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="MGsellerSign">
+        <PropertyRef Name="E_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGsellerSign_MGevents1">
+    <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+    <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGevents">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="MGsellerSign">
+        <PropertyRef Name="E_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGsellerSign_MGmember">
+    <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+    <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGmember">
+        <PropertyRef Name="M_ID" />
+      </Principal>
+      <Dependent Role="MGsellerSign">
+        <PropertyRef Name="M_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGsellerSign_MGsellerCheck">
+    <End Role="MGsellerCheck" Type="Self.MGsellerCheck" Multiplicity="1" />
+    <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGsellerCheck">
+        <PropertyRef Name="SC_ID" />
+      </Principal>
+      <Dependent Role="MGsellerSign">
+        <PropertyRef Name="SC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGwishlist_MGevents">
+    <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+    <End Role="MGwishlist" Type="Self.MGwishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGevents">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="MGwishlist">
+        <PropertyRef Name="E_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MGwishlist_MGmember">
+    <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+    <End Role="MGwishlist" Type="Self.MGwishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MGmember">
+        <PropertyRef Name="M_ID" />
+      </Principal>
+      <Dependent Role="MGwishlist">
+        <PropertyRef Name="M_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MarketGoModelStoreContainer">
+    <EntitySet Name="MGadminLogin" EntityType="Self.MGadminLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGcomment" EntityType="Self.MGcomment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGevents" EntityType="Self.MGevents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGmember" EntityType="Self.MGmember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGsellerCheck" EntityType="Self.MGsellerCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGsellerSign" EntityType="Self.MGsellerSign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MGwishlist" EntityType="Self.MGwishlist" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MGevents_MGmember" Association="Self.FK_MGevents_MGmember">
+      <End Role="MGmember" EntitySet="MGmember" />
+      <End Role="MGevents" EntitySet="MGevents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGsellerSign_MGevents" Association="Self.FK_MGsellerSign_MGevents">
+      <End Role="MGevents" EntitySet="MGevents" />
+      <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGsellerSign_MGevents1" Association="Self.FK_MGsellerSign_MGevents1">
+      <End Role="MGevents" EntitySet="MGevents" />
+      <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGsellerSign_MGmember" Association="Self.FK_MGsellerSign_MGmember">
+      <End Role="MGmember" EntitySet="MGmember" />
+      <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGsellerSign_MGsellerCheck" Association="Self.FK_MGsellerSign_MGsellerCheck">
+      <End Role="MGsellerCheck" EntitySet="MGsellerCheck" />
+      <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGwishlist_MGevents" Association="Self.FK_MGwishlist_MGevents">
+      <End Role="MGevents" EntitySet="MGevents" />
+      <End Role="MGwishlist" EntitySet="MGwishlist" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MGwishlist_MGmember" Association="Self.FK_MGwishlist_MGmember">
+      <End Role="MGmember" EntitySet="MGmember" />
+      <End Role="MGwishlist" EntitySet="MGwishlist" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

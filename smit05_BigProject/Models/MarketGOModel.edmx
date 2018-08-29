@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MarketGoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MGadminLogin">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="A_account" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="A_password" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MGcomment">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="C_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="C_sexcial" Type="int" />
+          <Property Name="C_email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="C_content" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MGevents">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="M_ID" Type="int" Nullable="false" />
+          <Property Name="E_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_time_start" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_time_end" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_regist_time_start" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_regist_time_end" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_peopleWho" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_unitInstock" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_detail" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_LOGO_L" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_LOGO_S" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E_NL_L1" Type="nvarchar(max)" />
+          <Property Name="E_NL_L2" Type="nvarchar(max)" />
+          <Property Name="E_NL_L3" Type="nvarchar(max)" />
+          <Property Name="E_NL_L4" Type="nvarchar(max)" />
+          <Property Name="E_NL_L5" Type="nvarchar(max)" />
+          <Property Name="E_NL_L6" Type="nvarchar(max)" />
+          <Property Name="E_NL_L7" Type="nvarchar(max)" />
+          <Property Name="E_NL_L8" Type="nvarchar(max)" />
+          <Property Name="E_NL_L9" Type="nvarchar(max)" />
+          <Property Name="E_NL_L10" Type="nvarchar(max)" />
+          <Property Name="OE_I1" Type="nvarchar(max)" />
+          <Property Name="OE_I2" Type="nvarchar(max)" />
+          <Property Name="OE_I3" Type="nvarchar(max)" />
+          <Property Name="OE_I4" Type="nvarchar(max)" />
+          <Property Name="OE_I5" Type="nvarchar(max)" />
+          <Property Name="OE_I6" Type="nvarchar(max)" />
+          <Property Name="OE_FB" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="MGmember">
+          <Key>
+            <PropertyRef Name="M_ID" />
+          </Key>
+          <Property Name="M_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="M_account" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="M_password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="M_password_check" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="M_email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="M_identity" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="M_host_name" Type="nvarchar(max)" />
+          <Property Name="M_host_page" Type="nvarchar(max)" />
+          <Property Name="M_host_people" Type="nvarchar(max)" />
+          <Property Name="M_host_about" Type="nvarchar(max)" />
+          <Property Name="M_host_image" Type="nvarchar(max)" />
+          <Property Name="M_contact_name" Type="nvarchar(max)" />
+          <Property Name="M_sexcial" Type="nvarchar(max)" />
+          <Property Name="M_contact_address" Type="nvarchar(max)" />
+          <Property Name="M_contact_tel" Type="nvarchar(max)" />
+          <Property Name="M_seller_name" Type="nvarchar(max)" />
+          <Property Name="M_seller_page" Type="nvarchar(max)" />
+          <Property Name="M_seller_about" Type="nvarchar(max)" />
+          <Property Name="M_seller_image" Type="nvarchar(max)" />
+          <Property Name="M_seller_exp" Type="nvarchar(max)" />
+          <Property Name="M_seller_I1" Type="nvarchar(max)" />
+          <Property Name="M_seller_I2" Type="nvarchar(max)" />
+          <Property Name="M_seller_I3" Type="nvarchar(max)" />
+          <Property Name="M_seller_I4" Type="nvarchar(max)" />
+          <Property Name="M_seller_I5" Type="nvarchar(max)" />
+          <Property Name="M_seller_I6" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="MGsellerCheck">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SC_state" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MGsellerSign">
+          <Key>
+            <PropertyRef Name="SS_ID" />
+          </Key>
+          <Property Name="SS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="E_ID" Type="int" Nullable="false" />
+          <Property Name="M_ID" Type="int" Nullable="false" />
+          <Property Name="SS_num" Type="int" Nullable="false" />
+          <Property Name="SS_note" Type="nvarchar(max)" />
+          <Property Name="SC_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MGwishlist">
+          <Key>
+            <PropertyRef Name="W_ID" />
+          </Key>
+          <Property Name="W_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="M_ID" Type="int" Nullable="false" />
+          <Property Name="E_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MGevents_MGmember">
+          <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+          <End Role="MGevents" Type="Self.MGevents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGevents">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGevents">
+          <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+          <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevents">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGevents1">
+          <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+          <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevents">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGmember">
+          <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+          <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGsellerCheck">
+          <End Role="MGsellerCheck" Type="Self.MGsellerCheck" Multiplicity="1" />
+          <End Role="MGsellerSign" Type="Self.MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGsellerCheck">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGwishlist_MGevents">
+          <End Role="MGevents" Type="Self.MGevents" Multiplicity="1" />
+          <End Role="MGwishlist" Type="Self.MGwishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevents">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGwishlist">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGwishlist_MGmember">
+          <End Role="MGmember" Type="Self.MGmember" Multiplicity="1" />
+          <End Role="MGwishlist" Type="Self.MGwishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGwishlist">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MarketGoModelStoreContainer">
+          <EntitySet Name="MGadminLogin" EntityType="Self.MGadminLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGcomment" EntityType="Self.MGcomment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGevents" EntityType="Self.MGevents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGmember" EntityType="Self.MGmember" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGsellerCheck" EntityType="Self.MGsellerCheck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGsellerSign" EntityType="Self.MGsellerSign" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MGwishlist" EntityType="Self.MGwishlist" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_MGevents_MGmember" Association="Self.FK_MGevents_MGmember">
+            <End Role="MGmember" EntitySet="MGmember" />
+            <End Role="MGevents" EntitySet="MGevents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGevents" Association="Self.FK_MGsellerSign_MGevents">
+            <End Role="MGevents" EntitySet="MGevents" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGevents1" Association="Self.FK_MGsellerSign_MGevents1">
+            <End Role="MGevents" EntitySet="MGevents" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGmember" Association="Self.FK_MGsellerSign_MGmember">
+            <End Role="MGmember" EntitySet="MGmember" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGsellerCheck" Association="Self.FK_MGsellerSign_MGsellerCheck">
+            <End Role="MGsellerCheck" EntitySet="MGsellerCheck" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGwishlist_MGevents" Association="Self.FK_MGwishlist_MGevents">
+            <End Role="MGevents" EntitySet="MGevents" />
+            <End Role="MGwishlist" EntitySet="MGwishlist" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGwishlist_MGmember" Association="Self.FK_MGwishlist_MGmember">
+            <End Role="MGmember" EntitySet="MGmember" />
+            <End Role="MGwishlist" EntitySet="MGwishlist" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MarketGoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MarketGoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MGadminLogins" EntityType="MarketGoModel.MGadminLogin" />
+          <EntitySet Name="MGcomments" EntityType="MarketGoModel.MGcomment" />
+          <EntitySet Name="MGevents" EntityType="MarketGoModel.MGevent" />
+          <EntitySet Name="MGmembers" EntityType="MarketGoModel.MGmember" />
+          <EntitySet Name="MGsellerChecks" EntityType="MarketGoModel.MGsellerCheck" />
+          <EntitySet Name="MGsellerSigns" EntityType="MarketGoModel.MGsellerSign" />
+          <EntitySet Name="MGwishlists" EntityType="MarketGoModel.MGwishlist" />
+          <AssociationSet Name="FK_MGevents_MGmember" Association="MarketGoModel.FK_MGevents_MGmember">
+            <End Role="MGmember" EntitySet="MGmembers" />
+            <End Role="MGevent" EntitySet="MGevents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGevents" Association="MarketGoModel.FK_MGsellerSign_MGevents">
+            <End Role="MGevent" EntitySet="MGevents" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGevents1" Association="MarketGoModel.FK_MGsellerSign_MGevents1">
+            <End Role="MGevent" EntitySet="MGevents" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGwishlist_MGevents" Association="MarketGoModel.FK_MGwishlist_MGevents">
+            <End Role="MGevent" EntitySet="MGevents" />
+            <End Role="MGwishlist" EntitySet="MGwishlists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGmember" Association="MarketGoModel.FK_MGsellerSign_MGmember">
+            <End Role="MGmember" EntitySet="MGmembers" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGwishlist_MGmember" Association="MarketGoModel.FK_MGwishlist_MGmember">
+            <End Role="MGmember" EntitySet="MGmembers" />
+            <End Role="MGwishlist" EntitySet="MGwishlists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MGsellerSign_MGsellerCheck" Association="MarketGoModel.FK_MGsellerSign_MGsellerCheck">
+            <End Role="MGsellerCheck" EntitySet="MGsellerChecks" />
+            <End Role="MGsellerSign" EntitySet="MGsellerSigns" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MGadminLogin">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="A_account" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="A_password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MGcomment">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_sexcial" Type="Int32" />
+          <Property Name="C_email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MGevent">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="M_ID" Type="Int32" Nullable="false" />
+          <Property Name="E_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_time_start" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_time_end" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_regist_time_start" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_regist_time_end" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_peopleWho" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_unitInstock" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_detail" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_LOGO_L" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_LOGO_S" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="E_NL_L10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_I6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OE_FB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MGmember" Relationship="MarketGoModel.FK_MGevents_MGmember" FromRole="MGevent" ToRole="MGmember" />
+          <NavigationProperty Name="MGsellerSigns" Relationship="MarketGoModel.FK_MGsellerSign_MGevents" FromRole="MGevent" ToRole="MGsellerSign" />
+          <NavigationProperty Name="MGsellerSigns1" Relationship="MarketGoModel.FK_MGsellerSign_MGevents1" FromRole="MGevent" ToRole="MGsellerSign" />
+          <NavigationProperty Name="MGwishlists" Relationship="MarketGoModel.FK_MGwishlist_MGevents" FromRole="MGevent" ToRole="MGwishlist" />
+        </EntityType>
+        <EntityType Name="MGmember">
+          <Key>
+            <PropertyRef Name="M_ID" />
+          </Key>
+          <Property Name="M_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="M_account" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_password_check" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_identity" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_host_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_host_page" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_host_people" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_host_about" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_host_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_contact_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_sexcial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_contact_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_contact_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_page" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_about" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_exp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="M_seller_I6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MGevents" Relationship="MarketGoModel.FK_MGevents_MGmember" FromRole="MGmember" ToRole="MGevent" />
+          <NavigationProperty Name="MGsellerSigns" Relationship="MarketGoModel.FK_MGsellerSign_MGmember" FromRole="MGmember" ToRole="MGsellerSign" />
+          <NavigationProperty Name="MGwishlists" Relationship="MarketGoModel.FK_MGwishlist_MGmember" FromRole="MGmember" ToRole="MGwishlist" />
+        </EntityType>
+        <EntityType Name="MGsellerCheck">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SC_state" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MGsellerSigns" Relationship="MarketGoModel.FK_MGsellerSign_MGsellerCheck" FromRole="MGsellerCheck" ToRole="MGsellerSign" />
+        </EntityType>
+        <EntityType Name="MGsellerSign">
+          <Key>
+            <PropertyRef Name="SS_ID" />
+          </Key>
+          <Property Name="SS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_ID" Type="Int32" Nullable="false" />
+          <Property Name="M_ID" Type="Int32" Nullable="false" />
+          <Property Name="SS_num" Type="Int32" Nullable="false" />
+          <Property Name="SS_note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SC_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MGevent" Relationship="MarketGoModel.FK_MGsellerSign_MGevents" FromRole="MGsellerSign" ToRole="MGevent" />
+          <NavigationProperty Name="MGevent1" Relationship="MarketGoModel.FK_MGsellerSign_MGevents1" FromRole="MGsellerSign" ToRole="MGevent" />
+          <NavigationProperty Name="MGmember" Relationship="MarketGoModel.FK_MGsellerSign_MGmember" FromRole="MGsellerSign" ToRole="MGmember" />
+          <NavigationProperty Name="MGsellerCheck" Relationship="MarketGoModel.FK_MGsellerSign_MGsellerCheck" FromRole="MGsellerSign" ToRole="MGsellerCheck" />
+        </EntityType>
+        <EntityType Name="MGwishlist">
+          <Key>
+            <PropertyRef Name="W_ID" />
+          </Key>
+          <Property Name="W_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="M_ID" Type="Int32" Nullable="false" />
+          <Property Name="E_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MGevent" Relationship="MarketGoModel.FK_MGwishlist_MGevents" FromRole="MGwishlist" ToRole="MGevent" />
+          <NavigationProperty Name="MGmember" Relationship="MarketGoModel.FK_MGwishlist_MGmember" FromRole="MGwishlist" ToRole="MGmember" />
+        </EntityType>
+        <Association Name="FK_MGevents_MGmember">
+          <End Type="MarketGoModel.MGmember" Role="MGmember" Multiplicity="1" />
+          <End Type="MarketGoModel.MGevent" Role="MGevent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGevent">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGevents">
+          <End Type="MarketGoModel.MGevent" Role="MGevent" Multiplicity="1" />
+          <End Type="MarketGoModel.MGsellerSign" Role="MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevent">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGevents1">
+          <End Type="MarketGoModel.MGevent" Role="MGevent" Multiplicity="1" />
+          <End Type="MarketGoModel.MGsellerSign" Role="MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevent">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGwishlist_MGevents">
+          <End Type="MarketGoModel.MGevent" Role="MGevent" Multiplicity="1" />
+          <End Type="MarketGoModel.MGwishlist" Role="MGwishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGevent">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="MGwishlist">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGmember">
+          <End Type="MarketGoModel.MGmember" Role="MGmember" Multiplicity="1" />
+          <End Type="MarketGoModel.MGsellerSign" Role="MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGwishlist_MGmember">
+          <End Type="MarketGoModel.MGmember" Role="MGmember" Multiplicity="1" />
+          <End Type="MarketGoModel.MGwishlist" Role="MGwishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGmember">
+              <PropertyRef Name="M_ID" />
+            </Principal>
+            <Dependent Role="MGwishlist">
+              <PropertyRef Name="M_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MGsellerSign_MGsellerCheck">
+          <End Type="MarketGoModel.MGsellerCheck" Role="MGsellerCheck" Multiplicity="1" />
+          <End Type="MarketGoModel.MGsellerSign" Role="MGsellerSign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MGsellerCheck">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="MGsellerSign">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MarketGoModelStoreContainer" CdmEntityContainer="MarketGoEntities">
+          <EntitySetMapping Name="MGadminLogins">
+            <EntityTypeMapping TypeName="MarketGoModel.MGadminLogin">
+              <MappingFragment StoreEntitySet="MGadminLogin">
+                <ScalarProperty Name="A_password" ColumnName="A_password" />
+                <ScalarProperty Name="A_account" ColumnName="A_account" />
+                <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGcomments">
+            <EntityTypeMapping TypeName="MarketGoModel.MGcomment">
+              <MappingFragment StoreEntitySet="MGcomment">
+                <ScalarProperty Name="C_content" ColumnName="C_content" />
+                <ScalarProperty Name="C_email" ColumnName="C_email" />
+                <ScalarProperty Name="C_sexcial" ColumnName="C_sexcial" />
+                <ScalarProperty Name="C_name" ColumnName="C_name" />
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGevents">
+            <EntityTypeMapping TypeName="MarketGoModel.MGevent">
+              <MappingFragment StoreEntitySet="MGevents">
+                <ScalarProperty Name="OE_FB" ColumnName="OE_FB" />
+                <ScalarProperty Name="OE_I6" ColumnName="OE_I6" />
+                <ScalarProperty Name="OE_I5" ColumnName="OE_I5" />
+                <ScalarProperty Name="OE_I4" ColumnName="OE_I4" />
+                <ScalarProperty Name="OE_I3" ColumnName="OE_I3" />
+                <ScalarProperty Name="OE_I2" ColumnName="OE_I2" />
+                <ScalarProperty Name="OE_I1" ColumnName="OE_I1" />
+                <ScalarProperty Name="E_NL_L10" ColumnName="E_NL_L10" />
+                <ScalarProperty Name="E_NL_L9" ColumnName="E_NL_L9" />
+                <ScalarProperty Name="E_NL_L8" ColumnName="E_NL_L8" />
+                <ScalarProperty Name="E_NL_L7" ColumnName="E_NL_L7" />
+                <ScalarProperty Name="E_NL_L6" ColumnName="E_NL_L6" />
+                <ScalarProperty Name="E_NL_L5" ColumnName="E_NL_L5" />
+                <ScalarProperty Name="E_NL_L4" ColumnName="E_NL_L4" />
+                <ScalarProperty Name="E_NL_L3" ColumnName="E_NL_L3" />
+                <ScalarProperty Name="E_NL_L2" ColumnName="E_NL_L2" />
+                <ScalarProperty Name="E_NL_L1" ColumnName="E_NL_L1" />
+                <ScalarProperty Name="E_LOGO_S" ColumnName="E_LOGO_S" />
+                <ScalarProperty Name="E_LOGO_L" ColumnName="E_LOGO_L" />
+                <ScalarProperty Name="E_detail" ColumnName="E_detail" />
+                <ScalarProperty Name="E_unitInstock" ColumnName="E_unitInstock" />
+                <ScalarProperty Name="E_peopleWho" ColumnName="E_peopleWho" />
+                <ScalarProperty Name="E_address" ColumnName="E_address" />
+                <ScalarProperty Name="E_regist_time_end" ColumnName="E_regist_time_end" />
+                <ScalarProperty Name="E_regist_time_start" ColumnName="E_regist_time_start" />
+                <ScalarProperty Name="E_time_end" ColumnName="E_time_end" />
+                <ScalarProperty Name="E_time_start" ColumnName="E_time_start" />
+                <ScalarProperty Name="E_name" ColumnName="E_name" />
+                <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGmembers">
+            <EntityTypeMapping TypeName="MarketGoModel.MGmember">
+              <MappingFragment StoreEntitySet="MGmember">
+                <ScalarProperty Name="M_seller_I6" ColumnName="M_seller_I6" />
+                <ScalarProperty Name="M_seller_I5" ColumnName="M_seller_I5" />
+                <ScalarProperty Name="M_seller_I4" ColumnName="M_seller_I4" />
+                <ScalarProperty Name="M_seller_I3" ColumnName="M_seller_I3" />
+                <ScalarProperty Name="M_seller_I2" ColumnName="M_seller_I2" />
+                <ScalarProperty Name="M_seller_I1" ColumnName="M_seller_I1" />
+                <ScalarProperty Name="M_seller_exp" ColumnName="M_seller_exp" />
+                <ScalarProperty Name="M_seller_image" ColumnName="M_seller_image" />
+                <ScalarProperty Name="M_seller_about" ColumnName="M_seller_about" />
+                <ScalarProperty Name="M_seller_page" ColumnName="M_seller_page" />
+                <ScalarProperty Name="M_seller_name" ColumnName="M_seller_name" />
+                <ScalarProperty Name="M_contact_tel" ColumnName="M_contact_tel" />
+                <ScalarProperty Name="M_contact_address" ColumnName="M_contact_address" />
+                <ScalarProperty Name="M_sexcial" ColumnName="M_sexcial" />
+                <ScalarProperty Name="M_contact_name" ColumnName="M_contact_name" />
+                <ScalarProperty Name="M_host_image" ColumnName="M_host_image" />
+                <ScalarProperty Name="M_host_about" ColumnName="M_host_about" />
+                <ScalarProperty Name="M_host_people" ColumnName="M_host_people" />
+                <ScalarProperty Name="M_host_page" ColumnName="M_host_page" />
+                <ScalarProperty Name="M_host_name" ColumnName="M_host_name" />
+                <ScalarProperty Name="M_identity" ColumnName="M_identity" />
+                <ScalarProperty Name="M_email" ColumnName="M_email" />
+                <ScalarProperty Name="M_password_check" ColumnName="M_password_check" />
+                <ScalarProperty Name="M_password" ColumnName="M_password" />
+                <ScalarProperty Name="M_account" ColumnName="M_account" />
+                <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGsellerChecks">
+            <EntityTypeMapping TypeName="MarketGoModel.MGsellerCheck">
+              <MappingFragment StoreEntitySet="MGsellerCheck">
+                <ScalarProperty Name="SC_state" ColumnName="SC_state" />
+                <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGsellerSigns">
+            <EntityTypeMapping TypeName="MarketGoModel.MGsellerSign">
+              <MappingFragment StoreEntitySet="MGsellerSign">
+                <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+                <ScalarProperty Name="SS_note" ColumnName="SS_note" />
+                <ScalarProperty Name="SS_num" ColumnName="SS_num" />
+                <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+                <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MGwishlists">
+            <EntityTypeMapping TypeName="MarketGoModel.MGwishlist">
+              <MappingFragment StoreEntitySet="MGwishlist">
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+                <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+                <ScalarProperty Name="W_ID" ColumnName="W_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

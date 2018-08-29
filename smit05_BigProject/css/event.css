@@ -1,0 +1,377 @@
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*-----------------------------*/
+.event_box .title {
+    margin: 0 0 14px;
+}
+
+.event-list {
+    margin: 0 -20px;
+}
+
+.event-list li {
+    width: 25%;
+    padding: 0 20px;
+}
+
+.event-list .box{
+    max-width: 332px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.event-list .pic {
+    position: relative;
+}
+
+.event-list li:nth-child(4n+1) {
+    clear: left;
+}
+
+.event-list .pic:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all .2s;
+}
+
+.event-list a:hover .pic:before {
+    opacity: 1;
+}
+
+.event-list {
+    color: #333;
+    line-height: 1.2;
+}
+
+.event-list .tit {
+    font-size: 18px;
+    margin: 0;
+    background: url(../images/lipic.png) no-repeat left 14px;
+    padding: 10px 0 0 17px;
+    transition: all .2s;
+}
+
+.event-list li:hover .tit {
+    color: #75BFAF;
+}
+
+.event-list .text{
+    margin: 0 auto 80px;
+}
+
+.event-list .text p {
+    font-size: 15px;
+    margin: 0;
+    padding: 5px 0 0 18px;
+}
+
+.event-list .textdate {
+    font-size: 13px;
+    margin: 0;
+    padding: 25px 0 0 0;
+}
+
+.event-list .textdate .btn.wish {
+    float: right;
+    margin: -4px 0 0px 0;
+}
+
+.event-list .more {
+    color: #999;
+    font-size: 13px;
+    margin: 7px 0 0 0;
+    padding: 12px 0 0 1px;
+    transition: all .2s;
+    background: url(../images/dot.png) repeat-x left top;
+}
+
+.event-list .more i {
+    display: inline-block;
+    background: url(../images/more.png) no-repeat left center;
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin: 1px 5px 0 0;
+}
+
+.event-list .more:hover {
+    color: #555555;
+}
+
+.event-list .more:hover i {
+    background: url(../images/more.png) no-repeat right center;
+}
+
+
+/*------------- detail -----------------*/
+
+.event_pic {
+    margin: 0 0 25px 0;
+}
+
+.event_box {
+\    color: #333;
+}
+
+.event_box .coll {
+    float: left;
+    width: 56%;
+}
+
+.event_box .colr {
+    float: right;
+    width: 42%;
+}
+
+.notice_title {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 0;
+    padding: 11px 0 12px 15px;
+}
+
+.notice_box {
+    background: #F6F6F6;
+    padding: 0 0 1px 0;
+    clear: both;
+    font-size: 13px;
+}
+
+.notice-list{
+    margin: 20px 35px 20px 20px;
+}
+
+.notice-list li {
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+
+.notice-list li:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #DDDDDD;
+    border-radius: 50%;
+    margin: 8px 8px 0 0;
+    vertical-align: top;
+}
+
+.notice-list span {
+    display: inline-block;
+    width: calc(100% - 15px);
+}
+
+.event_box .row {
+    margin: 30px -10px 0;
+    padding: 0;
+}
+
+.event_box .btn-box .col {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+}
+
+/*------------- old event -----------------*/
+
+.old_event_box .coll{
+    width: 48%;
+}
+
+.old_event_box .colr{
+    width: 46.5%;
+}
+
+.old_event_box .photo-list li{
+    width: 25%;
+    padding: 0 3px 6px;
+}
+
+
+/*------------- readyjoin -----------------*/
+
+.readyjoin {
+    margin: 95px auto auto auto;
+    max-width: 1200px;
+}
+
+.readyjoin .title {
+    margin: 0 0 20px 0;
+}
+
+.seller-list {
+    margin: 0 -20px;
+}
+
+.seller-list li {
+    width: calc(100% / 6);
+    padding: 0 20px 55px;
+}
+
+.seller-list li:nth-child(6n+1) {
+    clear: left;
+}
+
+.seller-list li a {
+    max-width: 170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seller-list .pic {
+    margin: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*------------- seller -----------------*/
+
+.seller_box .title {
+    margin: 0 0 14px;
+}
+
+.seller_box .col{
+    float: left;
+}
+
+.seller_box .coll{
+    width: 37.5%;
+}
+
+.seller_box .colr{
+    width: 60%;
+    float: right;
+}
+
+.photo-list li {
+    width: calc(100% / 6);
+    padding: 0 5px 10px;
+}
+
+.photo-list {
+    margin: 0 -5px;
+}
+
+/*------------- rwd -----------------*/
+
+@media screen and (max-width: 1200px) {
+    .event-list li {
+        width: calc((100% / 3) - 0.1px);
+    }
+    .event-list li:nth-child(4n+1) {
+        clear: none;
+    }
+    .event-list li:nth-child(3n+1) {
+        clear: left;
+    }
+    .seller-list{
+        margin: 0 -10px;
+    }
+    .seller-list li {
+        width: calc(100% / 4);
+        padding: 0 10px 40px;
+    }
+    .seller-list li:nth-child(6n+1) {
+        clear: none;
+    }
+    .seller-list li:nth-child(4n+1) {
+        clear: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event-list li {
+        width: 50%;
+    }
+    .event-list .textdate {
+        padding: 25px 0 0 0;
+    }
+    .event-list .text {
+        margin: 0 auto 50px;
+    }
+    .event-list li:nth-child(3n+1) {
+        clear: none;
+    }
+    .event-list li:nth-child(2n+1) {
+        clear: left;
+    }
+    .event_box .coll {
+        float: left;
+        width: 100%;
+    }
+    .event_box .colr {
+        float: right;
+        width: 100%;
+        background: #F6F6F6;
+        margin: 20px 0 0 0;
+    }
+    .seller_box .col{
+        float: none;
+        width: auto;
+        max-width: 525px;
+        margin: 0 auto;
+    }
+    .seller_box .coll{
+        margin-bottom: 25px;
+    }
+    .photo-list li {
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .event-list {
+        margin: 0;
+    }
+    .event-list li {
+        width: 100%;
+        padding: 0;
+    }
+    .event_box .coll {
+        float: left;
+        width: 100%;
+    }
+    .event_box .colr {
+        float: right;
+        width: 100%;
+        background: #F6F6F6;
+        margin: 20px 0 0 0;
+    }
+    .seller-list li:nth-child(2n+1) {
+        clear: left;
+    }
+    .seller-list li {
+        width: calc(100% / 2);
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .event_box .coll {
+        float: left;
+        width: 100%;
+    }
+    .event_box .colr {
+        float: right;
+        width: 100%;
+        background: #F6F6F6;
+        margin: 20px 0 0 0;
+    }
+    .event_box .select {
+        margin: 30px -5px 0;
+    }
+    .event_box .select .col {
+        padding: 0 5px;
+    }
+}

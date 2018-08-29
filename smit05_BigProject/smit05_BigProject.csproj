@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC765D6A-F599-400E-8F57-D23E031B8730}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>smit05_BigProject</RootNamespace>
+    <AssemblyName>smit05_BigProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bigproject_html\about.html" />
+    <Content Include="bigproject_html\contact.html" />
+    <Content Include="bigproject_html\contact_ok.html" />
+    <Content Include="css\basic.css" />
+    <Content Include="css\contact.css" />
+    <Content Include="css\event.css" />
+    <Content Include="css\icon-font\demo-files\demo.css" />
+    <Content Include="css\icon-font\demo-files\demo.js" />
+    <Content Include="css\icon-font\demo.html" />
+    <Content Include="css\icon-font\fonts\icon-font.svg" />
+    <Content Include="css\icon-font\Read Me.txt" />
+    <Content Include="css\icon-font\style.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\market.css" />
+    <Content Include="css\member.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\sign.css" />
+    <Content Include="css\style.css" />
+    <Content Include="bigproject_html\disclaimer.html" />
+    <Content Include="bigproject_html\event.html" />
+    <Content Include="bigproject_html\event_detail.html" />
+    <Content Include="bigproject_html\event_detail_nobtn.html" />
+    <Content Include="bigproject_html\event_old_detail.html" />
+    <Content Include="bigproject_html\event_sign.html" />
+    <Content Include="images\app_icon\android-chrome-192x192.png" />
+    <Content Include="images\app_icon\apple-touch-icon-114x114.png" />
+    <Content Include="images\app_icon\apple-touch-icon-120x120.png" />
+    <Content Include="images\app_icon\apple-touch-icon-144x144.png" />
+    <Content Include="images\app_icon\apple-touch-icon-152x152.png" />
+    <Content Include="images\app_icon\apple-touch-icon-180x180.png" />
+    <Content Include="images\app_icon\apple-touch-icon-57x57.png" />
+    <Content Include="images\app_icon\apple-touch-icon-60x60.png" />
+    <Content Include="images\app_icon\apple-touch-icon-72x72.png" />
+    <Content Include="images\app_icon\apple-touch-icon-76x76.png" />
+    <Content Include="images\app_icon\favicon-16x16.png" />
+    <Content Include="images\app_icon\favicon-32x32.png" />
+    <Content Include="images\app_icon\favicon-96x96.png" />
+    <Content Include="images\app_icon\favicon.ico" />
+    <Content Include="images\app_icon\largetile.png" />
+    <Content Include="images\app_icon\mediumtile.png" />
+    <Content Include="images\app_icon\smalltile.png" />
+    <Content Include="images\app_icon\widetile.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\captcha.jpg" />
+    <Content Include="images\close.png" />
+    <Content Include="images\code_ic.png" />
+    <Content Include="images\contact\info_ic.png" />
+    <Content Include="images\date_ic.png" />
+    <Content Include="images\default\ad.jpg" />
+    <Content Include="images\default\event.jpg" />
+    <Content Include="images\default\event_big.jpg" />
+    <Content Include="images\default\event_record.jpg" />
+    <Content Include="images\default\host.jpg" />
+    <Content Include="images\default\news.jpg" />
+    <Content Include="images\default\products.jpg" />
+    <Content Include="images\default\seller.jpg" />
+    <Content Include="images\dot.png" />
+    <Content Include="images\event\pic.jpg" />
+    <Content Include="images\event\seller.jpg" />
+    <Content Include="images\event\sellerphoto1.jpg" />
+    <Content Include="images\event\sellerphoto2.jpg" />
+    <Content Include="images\event\sellerphoto3.jpg" />
+    <Content Include="images\event\sellerphoto4.jpg" />
+    <Content Include="images\event\sellerphoto5.jpg" />
+    <Content Include="images\event\seller_banner.jpg" />
+    <Content Include="images\event\seller_big.jpg" />
+    <Content Include="images\form_checkbox.png" />
+    <Content Include="images\form_radio.png" />
+    <Content Include="images\index\about-bg.jpg" />
+    <Content Include="images\index\about-ic.png" />
+    <Content Include="images\index\arrow.png" />
+    <Content Include="images\index\banner.jpg" />
+    <Content Include="images\index\events-ic.png" />
+    <Content Include="images\index\latestEvents.jpg" />
+    <Content Include="images\index\market-ic.png" />
+    <Content Include="images\index\market1.jpg" />
+    <Content Include="images\index\market2.jpg" />
+    <Content Include="images\index\market3.jpg" />
+    <Content Include="images\index\market4.jpg" />
+    <Content Include="images\index\market5.jpg" />
+    <Content Include="images\index\market6.jpg" />
+    <Content Include="images\index\market7.jpg" />
+    <Content Include="images\index\market8.jpg" />
+    <Content Include="images\lightbox_close.jpg" />
+    <Content Include="images\lipic.png" />
+    <Content Include="images\lipic_b.png" />
+    <Content Include="images\lipic_y.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\market\eventphoto1.jpg" />
+    <Content Include="images\market\eventphoto2.jpg" />
+    <Content Include="images\market\eventphoto3.jpg" />
+    <Content Include="images\market\eventphoto4.jpg" />
+    <Content Include="images\market\eventphoto5.jpg" />
+    <Content Include="images\market\event_big.jpg" />
+    <Content Include="images\market\market.jpg" />
+    <Content Include="images\member\ic.png" />
+    <Content Include="images\member\ic2.png" />
+    <Content Include="images\member\ic3.png" />
+    <Content Include="images\member\ic4.png" />
+    <Content Include="images\member\ic5.png" />
+    <Content Include="images\member\ic6.png" />
+    <Content Include="images\member\ic7.png" />
+    <Content Include="images\mem_btn_ic.png" />
+    <Content Include="images\menu_divider.png" />
+    <Content Include="images\menu_line.png" />
+    <Content Include="images\mobile_gotop.png" />
+    <Content Include="images\more.png" />
+    <Content Include="images\more2.png" />
+    <Content Include="images\required.png" />
+    <Content Include="images\search_ic.png" />
+    <Content Include="images\search_ic2.png" />
+    <Content Include="images\wish.png" />
+    <Content Include="bigproject_html\index.html" />
+    <Content Include="js\album.js" />
+    <Content Include="js\basic.js" />
+    <Content Include="js\fancyBox\.gitattributes" />
+    <Content Include="js\fancyBox\.gitignore" />
+    <Content Include="js\fancyBox\demo\1_b.jpg" />
+    <Content Include="js\fancyBox\demo\1_s.jpg" />
+    <Content Include="js\fancyBox\demo\2_b.jpg" />
+    <Content Include="js\fancyBox\demo\2_s.jpg" />
+    <Content Include="js\fancyBox\demo\3_b.jpg" />
+    <Content Include="js\fancyBox\demo\3_s.jpg" />
+    <Content Include="js\fancyBox\demo\4_b.jpg" />
+    <Content Include="js\fancyBox\demo\4_s.jpg" />
+    <Content Include="js\fancyBox\demo\5_b.jpg" />
+    <Content Include="js\fancyBox\demo\5_s.jpg" />
+    <Content Include="js\fancyBox\demo\ajax.txt" />
+    <Content Include="js\fancyBox\demo\iframe.html" />
+    <Content Include="js\fancyBox\demo\index.html" />
+    <Content Include="js\fancyBox\gulpfile.js" />
+    <Content Include="js\fancyBox\lib\jquery-1.10.2.min.js" />
+    <Content Include="js\fancyBox\lib\jquery.mousewheel.pack.js" />
+    <Content Include="js\fancyBox\source\blank.gif" />
+    <Content Include="js\fancyBox\source\fancybox_loading%402x.gif" />
+    <Content Include="js\fancyBox\source\fancybox_loading.gif" />
+    <Content Include="js\fancyBox\source\fancybox_overlay.png" />
+    <Content Include="js\fancyBox\source\fancybox_sprite%402x.png" />
+    <Content Include="js\fancyBox\source\fancybox_sprite.png" />
+    <Content Include="js\fancyBox\source\helpers\fancybox_buttons.png" />
+    <Content Include="js\fancyBox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="js\fancyBox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="js\fancyBox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="js\fancyBox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="js\fancyBox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="js\fancyBox\source\jquery.fancybox.css" />
+    <Content Include="js\fancyBox\source\jquery.fancybox.js" />
+    <Content Include="js\fancyBox\source\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.scrollTo\.gitignore" />
+    <Content Include="js\jquery.scrollTo\jquery.scrollTo.js" />
+    <Content Include="js\jquery.scrollTo\jquery.scrollTo.min.js" />
+    <Content Include="js\jquery.scrollTo\tests\ElemMaxY-compat.html" />
+    <Content Include="js\jquery.scrollTo\tests\ElemMaxY-quirks.html" />
+    <Content Include="js\jquery.scrollTo\tests\test.js" />
+    <Content Include="js\jquery.scrollTo\tests\WinMaxY-compat.html" />
+    <Content Include="js\jquery.scrollTo\tests\WinMaxY-quirks.html" />
+    <Content Include="js\jquery.scrollTo\tests\WinMaxY-to-iframe-compat.html" />
+    <Content Include="js\jquery.scrollTo\tests\WinMaxY-to-iframe-quirks.html" />
+    <Content Include="js\main.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\.gitignore" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\ajax.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\ajax_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\auto_hide_scrollbar_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\auto_scrolling_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\bootstrap_examples-extended.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\bootstrap_examples.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\callbacks_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\colorbox.css" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\images\border.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\images\controls.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\images\loading.gif" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\images\loading_background.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\images\overlay.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox\jquery.colorbox-min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\colorbox_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\complete_examples.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\disable_destroy_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\fluid_scrollbar_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\full_page_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\grid_and_snap_while_scrolling_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\iframe_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img1.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img2.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img3.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img4.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img5.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img6.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\images\img7.jpg" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\infinite_scroll_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\init_hidden_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\init_position_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_accordion_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_autocomplete_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_dialog_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_resizable_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_sortable_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\jquery_ui_tabs_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\keyboard_nav_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\loading_each_script_separately.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\loading_each_script_separately_via_cdn.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\loading_scripts_via_cdn.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\logo-alt.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\logo.png" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\max-height_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\max-width_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\multiple_scrollbars_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\nested_scrollbars_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\nested_scrollbars_demo_alt.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\nested_scrollbars_demo_alt_2.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\rtl_direction_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\scrollbar_themes_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\scrollTo_demo.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\scroll_buttons_and_snap_scrolling_examples.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\simple_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\simple_example_all_params.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\style.css" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\examples\textarea_example.html" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.css" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.min.css" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery-1.11.0.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery-1.9.1.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery-2.1.0.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery-ui-1.10.4.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery.mousewheel-3.0.6.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery.mousewheel.min.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mCustomScrollbar.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel-3.0.6.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel.js" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\LICENSE.txt" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\mCSB_buttons.png" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\slick\.gitignore" />
+    <Content Include="js\slick\index.html" />
+    <Content Include="js\slick\slick\ajax-loader.gif" />
+    <Content Include="js\slick\slick\fonts\slick.svg" />
+    <Content Include="js\slick\slick\slick-theme.css" />
+    <Content Include="js\slick\slick\slick.css" />
+    <Content Include="js\slick\slick\slick.js" />
+    <Content Include="js\slick\slick\slick.min.js" />
+    <Content Include="js\slick\slick\slick_origin.js" />
+    <Content Include="js\WOW\.gitignore" />
+    <Content Include="js\WOW\css\libs\animate.css" />
+    <Content Include="js\WOW\css\site.css" />
+    <Content Include="js\WOW\demo.html" />
+    <Content Include="js\WOW\dist\wow.js" />
+    <Content Include="js\WOW\dist\wow.min.js" />
+    <Content Include="js\WOW\Gruntfile.js" />
+    <Content Include="js\WOW\spec\javascripts\fixtures\custom.html" />
+    <Content Include="js\WOW\spec\javascripts\fixtures\simple.html" />
+    <Content Include="js\WOW\spec\javascripts\helpers\SpecHelper.js" />
+    <Content Include="js\WOW\spec\javascripts\libs\jasmine-jquery.js" />
+    <Content Include="js\WOW\spec\javascripts\libs\jquery.js" />
+    <Content Include="js\WOW\spec\javascripts\wow-spec.js" />
+    <Content Include="bigproject_html\market.html" />
+    <Content Include="bigproject_html\market_detail.html" />
+    <Content Include="bigproject_html\member_edit.html" />
+    <Content Include="bigproject_html\member_edit_host.html" />
+    <Content Include="bigproject_html\member_edit_host_ok.html" />
+    <Content Include="bigproject_html\member_edit_ok.html" />
+    <Content Include="bigproject_html\member_edit_seller.html" />
+    <Content Include="bigproject_html\member_edit_seller_ok.html" />
+    <Content Include="bigproject_html\member_event.html" />
+    <Content Include="bigproject_html\member_eventsign.html" />
+    <Content Include="bigproject_html\member_event_add.html" />
+    <Content Include="bigproject_html\member_event_check.html" />
+    <Content Include="bigproject_html\member_event_new.html" />
+    <Content Include="bigproject_html\member_forgot.html" />
+    <Content Include="bigproject_html\member_forgot_ok.html" />
+    <Content Include="bigproject_html\member_login.html" />
+    <Content Include="bigproject_html\member_login_ok.html" />
+    <Content Include="bigproject_html\member_oldevent.html" />
+    <Content Include="bigproject_html\member_oldevent_detail.html" />
+    <Content Include="bigproject_html\member_password.html" />
+    <Content Include="bigproject_html\member_password_ok.html" />
+    <Content Include="bigproject_html\member_register.html" />
+    <Content Include="bigproject_html\member_register_host.html" />
+    <Content Include="bigproject_html\member_register_host_ok.html" />
+    <Content Include="bigproject_html\member_register_ok.html" />
+    <Content Include="bigproject_html\member_register_seller.html" />
+    <Content Include="bigproject_html\member_register_seller_ok.html" />
+    <Content Include="bigproject_html\member_seller_signlist.html" />
+    <Content Include="bigproject_html\member_seller_wishlist.html" />
+    <Content Include="bigproject_html\member_wishlist.html" />
+    <Content Include="bigproject_html\notice.html" />
+    <Content Include="bigproject_html\search.html" />
+    <Content Include="bigproject_html\seller.html" />
+    <Content Include="bigproject_html\terms.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\MarketGOModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MarketGOModel.Context.cs</LastGenOutput>
+      <DependentUpon>MarketGOModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MarketGOModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MarketGOModel.edmx</DependentUpon>
+      <LastGenOutput>MarketGOModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\MarketGOModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MarketGOModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MarketGOModel.edmx.diagram">
+      <DependentUpon>MarketGOModel.edmx</DependentUpon>
+    </Content>
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketGOModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketGOModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketGOModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketGOModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketGOModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGadminLogin.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGcomment.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGevent.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGmember.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGsellerCheck.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGsellerSign.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MGwishlist.cs">
+      <DependentUpon>MarketGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\icon-font\fonts\icon-font.eot" />
+    <Content Include="css\icon-font\fonts\icon-font.ttf" />
+    <Content Include="css\icon-font\fonts\icon-font.woff" />
+    <Content Include="css\icon-font\selection.json" />
+    <Content Include="images\about\Thumbs.db" />
+    <Content Include="images\_notes\date_ic.png.mno" />
+    <Content Include="js\fancyBox\bower.json" />
+    <Content Include="js\fancyBox\CHANGELOG.md" />
+    <Content Include="js\fancyBox\composer.json" />
+    <Content Include="js\fancyBox\fancybox.jquery.json" />
+    <Content Include="js\fancyBox\package.json" />
+    <Content Include="js\fancyBox\README.md" />
+    <Content Include="js\fancyBox\source\Thumbs.db" />
+    <Content Include="js\fancyBox\sprite.psd" />
+    <Content Include="js\jquery.scrollTo\.jscsrc" />
+    <Content Include="js\jquery.scrollTo\.jshintrc" />
+    <Content Include="js\jquery.scrollTo\bower.json" />
+    <Content Include="js\jquery.scrollTo\CHANGELOG.md" />
+    <Content Include="js\jquery.scrollTo\composer.json" />
+    <Content Include="js\jquery.scrollTo\LICENSE" />
+    <Content Include="js\jquery.scrollTo\package.json" />
+    <Content Include="js\jquery.scrollTo\README.md" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\bower.json" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js.gz" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\package.json" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\readme.md" />
+    <Content Include="js\malihu-custom-scrollbar-plugin\source-files\mCSB_buttons.psd" />
+    <Content Include="js\slick\bower.json" />
+    <Content Include="js\slick\component.json" />
+    <Content Include="js\slick\CONTRIBUTING.markdown" />
+    <Content Include="js\slick\ISSUE_TEMPLATE.md" />
+    <Content Include="js\slick\LICENSE" />
+    <Content Include="js\slick\Makefile" />
+    <Content Include="js\slick\package.json" />
+    <Content Include="js\slick\README.markdown" />
+    <Content Include="js\slick\slick.jquery.json" />
+    <Content Include="js\slick\slick\config.rb" />
+    <Content Include="js\slick\slick\fonts\slick.eot" />
+    <Content Include="js\slick\slick\fonts\slick.ttf" />
+    <Content Include="js\slick\slick\fonts\slick.woff" />
+    <Content Include="js\slick\slick\slick-theme.less" />
+    <Content Include="js\slick\slick\slick-theme.scss" />
+    <Content Include="js\slick\slick\slick.less" />
+    <Content Include="js\slick\slick\slick.scss" />
+    <Content Include="js\slick\slick\Thumbs.db" />
+    <Content Include="js\WOW\.travis.yml" />
+    <Content Include="js\WOW\bower.json" />
+    <Content Include="js\WOW\package.json" />
+    <Content Include="js\WOW\README.md" />
+    <Content Include="js\WOW\spec\coffeescripts\helpers\SpecHelper.coffee" />
+    <Content Include="js\WOW\spec\coffeescripts\wow-spec.coffee" />
+    <Content Include="js\WOW\src\wow.coffee" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Member\Member_register_host.cshtml" />
+    <Content Include="Views\Shared\_Layout_member.cshtml" />
+    <Content Include="Views\Member\Member_register_seller.cshtml" />
+    <Content Include="Views\Member\test.cshtml" />
+    <Content Include="Views\Member\Member_register.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49959</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49959/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 封裝。請啟用 NuGet 封裝還原，以下載該封裝。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

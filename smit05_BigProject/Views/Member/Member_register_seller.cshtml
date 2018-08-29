@@ -1,0 +1,205 @@
+﻿@* v2_0829'18_ES_圖片與性別無處理，最後checkbox尚未在controller加上bool
+
+*@
+
+@model smit05_BigProject.Models.MGmember
+@{
+
+    ViewBag.Title = "Member_register_seller";
+    Layout = "~/Views/Shared/_Layout_member.cshtml";
+}
+
+<form action="" method="post">
+    <section class="content">
+        <div class="content-title"><span>加入會員：攤主會員</span></div>
+        <p class="reminder">為了提供您更完善的服務，請務必輸入正確的資料，謝謝您。 <span><b></b>為必填欄位</span></p>
+        <div class="form-wrap type1">
+            <div class="form-box line">
+                <div class="row clearfix">
+                    <div class="col">
+                        <div class="form-group upload-pic">
+                            <label class="control-label required">社團形象圖</label>
+                            <div class="control-box">
+                                <figure class="pic">
+                                    <img src="images/default/seller.jpg" alt="">
+                                </figure>
+                                <input class="form-control" type="text" name="" id="">
+                                <!-- 程式需改成button -->
+                                <a href="#" class="btn">上傳圖片</a>
+                                <div class="tips">圖片尺寸525px * 525px</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">品牌介紹</label>
+                            <div class="control-box">
+                                <textarea name="M_seller_about" id="M_seller_about" class="form-control" style="height:103px" value="@Model.M_seller_about" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">品牌名稱</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_seller_name" id="M_seller_name" value="@Model.M_seller_name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">品牌專頁</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_seller_page" id="M_seller_page" value="@Model.M_seller_page" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">市集經驗</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_seller_exp" id="M_seller_exp" value="@Model.M_seller_exp" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label required">品牌商品照</label>
+                            <div class="tips">圖片尺寸500px * 500px</div>
+                            <div class="row clearfix col3">
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I1" id="M_seller_I1" value="@Model.M_seller_I1">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I2" id="M_seller_I2" value="@Model.M_seller_I2">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I3" id="M_seller_I3" value="@Model.M_seller_I3">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I4" id="M_seller_I4" value="@Model.M_seller_I4">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I5" id="M_seller_I5" value="@Model.M_seller_I5">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group upload-pic">
+                                        <div class="control-box">
+                                            <figure class="pic">
+                                                <img src="images/default/event_record.jpg" alt="">
+                                            </figure>
+                                            <input class="form-control" type="text" name="M_seller_I6" id="M_seller_I6" value="@Model.M_seller_I6">
+                                            <!-- 程式需改成button -->
+                                            <a href="#" class="btn">上傳圖片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">帳號</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_account" id="M_account" placeholder="請輸入 (4-10 字符)" value="@Model.M_account" oninput="if(value.length>10)value=value.slice(0,10)" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">密碼</label>
+                            <div class="control-box">
+                                <input class="form-control" type="password" name="M_password" id="M_password" placeholder="請輸入 (4-10 字符)" value="@Model.M_password" oninput="if(value.length>10)value=value.slice(0,10)" required>
+                                <div class="tips">請熟記密碼，此為往後登入會員的密碼，並請定期更換密碼設定</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">密碼確認</label>
+                            <div class="control-box">
+                                <input class="form-control" type="password" name="M_password_check" id="M_password_check" placeholder="請輸入 (4-10 字符)" value="@Model.M_password_check" oninput="if(value.length>10)value=value.slice(0,10)" required>
+                            </div>
+                        </div>
+                        <div class="form-group name">
+                            <label class="control-label required">聯絡人中文全名</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_contact_name" id="M_contact_name" value="@Model.M_contact_name" required>
+                                <div class="radio-box">
+                                    <label class="form-radio"><input type="radio" name="gender" id="" checked> 先生</label>
+                                    <label class="form-radio"><input type="radio" name="gender" id=""> 小姐</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">聯絡電話</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_contact_tel" id="M_contact_tel" value="@Model.M_contact_tel" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label required">E-mail</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="M_email" id="M_email" placeholder="ex:smit05@gmail.com.tw" value="@Model.M_email" required>
+                            </div>
+                        </div>
+                        <div class="form-group captcha">
+                            <label class="control-label required">驗證碼</label>
+                            <div class="control-box">
+                                <input class="form-control" type="text" name="" id="">
+                                <a href="#">
+                                    <!-- <img src="system/captcha/captcha_show.php?r=<?=md5(rand().rand())?>" name="imgcode" id="imgcode" class="imgcode" /> -->
+                                    <img src="images/captcha.jpg" alt="">
+                                    <i></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="check-agree-box">
+                <div class="check-agree">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="" id=""> 我已仔細閱讀「<a href="terms.html" target="_blank">使用條款</a>」、「<a href="disclaimer.html" target="_blank">免責聲明</a>」等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則
+                    </label>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button type="reset" class="btn simple">清除重填</button>
+                <!-- <button  type="submit" class="btn simple bg2">SEND</button> -->
+                <button type="submit" href="member_register_seller_ok.html" class="btn simple bg2">確認送出</button>
+            </div>
+        </div>
+    </section>
+</form>

@@ -1,0 +1,304 @@
+/*-------------- wishlist -----------*/
+
+.btn.allcheck{
+    float: right;
+    margin: -10px 0 0 0;
+}
+
+.form-title2 .btn.allcheck{
+    margin: 0;
+    float: none;
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+}
+
+/*-------------- wishlist -----------*/
+
+.event-list .btn.wish {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 10;
+}
+
+.event-list .btn.wish:after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    z-index: -1;
+}
+
+.event-list .textdate {
+    position: absolute;
+    top: 7px;
+    background: #1d1d1d;
+    left: -7px;
+    color: #fff;
+    padding: 5px 8px;
+}
+
+.event-list .textdate time {}
+
+
+/*-------------- signlist -----------*/
+
+.check_status {
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 1;
+    padding: 7px 0;
+    display: block;
+    color: #aaa;
+    margin: 12px 0 7px 0;
+}
+
+.check_status.notyet {}
+
+.check_status.active {
+    border-color: #ffcfcb;
+    color: #ff9f9d;
+}
+
+.check_status.nopass {
+    color: #4c4c4c;
+    border-color: #4c4c4c;
+}
+
+.check_status.start {
+    background: #F8AC0C;
+    color: #fff;
+    border-color: #F8AC0C;
+}
+
+.check_status.deadline{}
+
+.check_status.money{
+    background: #828282;
+    color: #fff;
+    border-color: #828282;
+}
+
+.check_status.moneyok{
+    background: #ff9f9d;
+    color: #fff;
+    border-color: #ff9f9d;
+}
+
+.btn.pure.style02 {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    color: transparent;
+    overflow: hidden;
+    background: #1d1d1d url(../images/close.png) no-repeat center center;
+}
+
+.btn.pure.style02:hover{
+    color: transparent;
+    background: #bdbdbd url(../images/close.png) no-repeat center;
+}
+
+
+/*-------------- event -----------*/
+
+.reminder.check{
+    font-size: 15px;
+    color: #222;
+    padding: 0 0 10px 3px;
+}
+
+.reminder.check .check-box{
+    float: left;
+    width: calc(100% - 130px);
+}
+
+.reminder.check span{
+    display: inline-block;
+}
+
+.reminder.check span:after{
+    content:"";
+    width: 1px;
+    height: 20px;
+    display: inline-block;
+    background: #d2d2d2;
+    vertical-align: middle;
+    margin: 0 6px 3px 10px;
+}
+
+.reminder.check i{
+    font-style: normal;
+    font-weight:  bold;
+    display: inline-block;
+    margin: 0 4px 0 0;
+}
+
+.reminder.check .money{
+    color: #F8AC0C;
+}
+
+.reminder.check .ok{
+    color: #ff8686;
+}
+
+.reminder.check .notok{
+    color: #aaa;
+}
+
+.sign_num {
+    display: block;
+    text-align: center;
+    color: #f8ac0c;
+    position: relative;
+}
+
+.sign_num:before,
+.sign_num:after {
+    content: "[";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    font-size: 16px;
+}
+
+.sign_num:after {
+    content: "]";
+    left: auto;
+    right: 0;
+}
+
+.sign_num.end{
+    color: #222;
+}
+
+.event-list .btn-box{
+    padding: 0;
+}
+
+.btn-box .col{
+    float: left;
+}
+
+.btn-box .coll{
+    width: 60%;
+}
+
+.btn-box .colr{
+    width: 40%;
+}
+
+.btn-box .btn.check,
+.btn-box .btn.record{
+    margin: 12px auto 7px;
+    display: block;
+    line-height: 30px;
+    background: #636363;
+    color: #fff;
+    transition: all .2s;
+}
+
+.btn-box .btn.record{
+    background: #C7E7E2;
+    color: #222;
+}
+
+.btn-box .btn.check:hover,
+.btn-box .btn.record:hover{
+    color: #fff;
+    background: #75bfaf;
+}
+
+/*-------------- seller check -----------*/
+
+.seller-list .pic:before{
+    content:"";
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+}
+
+.seller-list .money .pic:before{
+    border: 5px solid rgba(248, 172, 12, 0.44);
+}
+
+.seller-list .ok .pic:before{
+    border: 5px solid rgba(255, 134, 134, 0.54);
+}
+
+.seller-list .notok .pic:before{
+    border: 5px solid rgba(170, 170, 170, 0.75);
+}
+
+.seller-list .money .form-control{
+    border-color: #F8AC0C;
+}
+
+.seller-list .ok .form-control{
+    border-color: #ff8686;
+}
+
+.seller-list .notok .form-control{
+    border-color: #aaa;
+    border: 1px solid #aaa;
+}
+
+/*-------------- oldevent -----------*/
+
+.oldevent-list .textdate {
+    background: #a9a9a9;
+}
+
+.oldevent-list .pic {
+    opacity: .7;
+}
+
+.oldevent-list .tit {
+    color: #aaa;
+    background: url(../images/lipic_b.png) no-repeat left 14px;
+}
+
+
+/*-------------- check -----------*/
+
+.check-agree-box {
+    background: #F3F3F3;
+    clear: both;
+    font-size: 13px;
+    padding: 10px 25px;
+    margin: 35px 0 0 0;
+}
+
+.check-agree label {}
+
+.check-agree strong,
+.check-agree a {
+    color: #FF7272;
+}
+
+.check-agree a:hover {
+    text-decoration: underline;
+}
+
+
+/*-------------- rwd -----------*/
+
+@media screen and (max-width: 767px) {
+    .check-agree-box {
+        padding: 15px;
+    }
+}

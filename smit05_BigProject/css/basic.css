@@ -1,0 +1,180 @@
+/* 前台通用樣式 */
+
+body {
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container:after,
+.list-h:after,
+.clearfix:after,
+.row:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto !important;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.col {
+    box-sizing: border-box;
+}
+
+
+.list-inline,
+.list-inline ul,
+.list-h,
+.list-h ul,
+.list-v,
+.list-v ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-inline>li,
+.list-inline .item {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.list-inline>li a,
+.list-inline .item a {
+    display: inline-block;
+    position: relative;
+}
+
+.list-h>li,
+.list-h .item {
+    float: left;
+    box-sizing: border-box;
+}
+
+.list-h>li a,
+.list-h .item a,
+.list-v li a {
+    display: block;
+    position: relative;
+}
+
+.pic {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.pic.full img {
+    width: 100%;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.slick-item+.slick-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.ic {
+    display: inline-block;
+}
+
+.icon {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+
+.btn,
+.ibtn {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
+/* Firefox: Get rid of the inner focus border */
+
+.btn::-moz-focus-inner,
+.ibtn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.btn:focus,
+.ibtn:focus {
+    outline: none;
+}
+
+.ibtn {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    transition: none;
+}
+
+.ibtn:hover {
+    background-position: 0 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    word-break: break-all;
+}
